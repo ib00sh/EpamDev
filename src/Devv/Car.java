@@ -1,7 +1,7 @@
 package Devv;
 
-public class Car {
-    short speed;
+abstract class Car {
+    protected short speed;
     private String model;
     private float weight;
     private String color;
@@ -12,11 +12,7 @@ public class Car {
         this.weight = weight;
         this.color = color;
         this.isWork = isWork;
-        printAll();
-    }
-
-    Car() {
-        System.out.println("объект был создан");
+       // printAll();
     }
 
     void setAll (String model, float weight, String color, boolean isWork){
@@ -30,11 +26,13 @@ public class Car {
         this.speed = speed;
     }
 
-    void printAll(){
+    protected void printAll(){
         String isWork = this.isWork ? "работает" : "не работает";
         System.out.println("Автомобиль марки " + this.model + ", имеет скорость: "
         + this.speed + " и вес: " + this.weight + ". Его цвет " + this.color
         + " и он " + isWork);
     }
+
+    abstract void startEngine();
 
 }

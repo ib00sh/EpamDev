@@ -2,17 +2,24 @@ package Devv;
 
 public class Main {
     public static void main(String[] args) {
-        int num = 230;
-        Car bmw = new Car((short)num);
-        bmw.setAll("m3",1238.5f, "Белый",false);
-        bmw.printAll();
+        final int num = 230;
+//        Car bmw = new Car((short)num);
+//        bmw.setAll("m3",1238.5f, "Белый",false);
+//        bmw.printAll();
 
+        BMW m5 = new BMW(true, "M5", 2500.23f,
+                         "Синий", true, (short)300);
+        m5.printAll();
+        m5.startEngine();
 
-        Car mercedes = new Car("s500",3002.58f, "Черный",true);
-        mercedes.speed = 320;
+//        Car mercedes = new Car("s500",3002.58f, "Черный",true);
+//        mercedes.speed = 320;
+//
+//        Car audi = new Car("R8",2081.3f, "Серебристый",true);
+//        audi.speed = 320;
 
-        Car audi = new Car("R8",2081.3f, "Серебристый",true);
-        audi.speed = 320;
+//        System.out.println(BMW.num);
+//        BMW.printTest();
 
 
     }
