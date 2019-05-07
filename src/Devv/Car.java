@@ -7,6 +7,21 @@ abstract class Car {
     private String color;
     private boolean isWork;
 
+    class Driving {
+        private boolean isDrive;
+
+        public Driving(boolean isDrive) {
+            this.isDrive = isDrive;
+        }
+
+        void drive() {
+            System.out.println(this.isDrive);
+        }
+    }
+
+    Driving engine = new Driving(true);
+
+
     Car(String model, float weight, String color, boolean isWork) {
         this.model = model;
         this.weight = weight;

@@ -16,6 +16,7 @@ public class BMW extends Car {
         super.printAll();
         String isMPerfomance = this.isMPerfomance ? "является " : "не является";
         System.out.println("Машина " + isMPerfomance + " М перфомансе" );
+        super.engine.drive();
     }
 
     @Override
